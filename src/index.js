@@ -1,4 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-ReactDOM.render(<div>Curso de React</div>, document.getElementById("root"));
+//Normal function
+
+// function NewApp() {
+//   return <div>Hola a todos</div>;
+// }
+
+//Arrow Function
+const App = () => {
+  return <div>Hola a todos</div>;
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));

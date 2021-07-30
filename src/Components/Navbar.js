@@ -13,6 +13,7 @@ function App() {
         sticky="top"
         expand="sm"
         collapseOnSelect
+        className="px-4"
       >
         <Navbar.Brand>
           <img className="logo" src={logo} width="40px" height="40px" />

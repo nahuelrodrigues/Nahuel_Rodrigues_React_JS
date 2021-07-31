@@ -18,25 +18,27 @@ function NavBar() {
       >
         <Navbar.Brand>
           <img className="logo" src={logo} width="40px" height="40px" />
-          {""} Mi app en React.js
+          <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
           <Nav>
-            <NavDropdown title="Products">
-              <NavDropdown.Item href="#products/tea">Libros</NavDropdown.Item>
-              <NavDropdown.Item href="#products/coffee">PDF</NavDropdown.Item>
-              <NavDropdown.Item href="#products/chocolate">
+            <NavDropdown title="Productos">
+              <NavDropdown.Item href="#productos/tea">Libros</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/coffee">PDF</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/chocolate">
                 Videos
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#products/promo">Cursos</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/promo">
+                Cursos
+              </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="blog">Blog</Nav.Link>
-            <Nav.Link href="about-us">About-Us</Nav.Link>
-            <Nav.Link href="contact-us">Contact-Us</Nav.Link>
+            <Nav.Link href="nosotros">Nosotros</Nav.Link>
+            <Nav.Link href="contacto">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <CartWidget />

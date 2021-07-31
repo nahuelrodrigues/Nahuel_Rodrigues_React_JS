@@ -25,15 +25,13 @@ function NavBar() {
         <Navbar.Collapse>
           <Nav>
             <NavDropdown title="Products">
-              <NavDropdown.Item href="#products/tea">Tea</NavDropdown.Item>
-              <NavDropdown.Item href="#products/coffee">
-                Coffee
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#products/tea">Libros</NavDropdown.Item>
+              <NavDropdown.Item href="#products/coffee">PDF</NavDropdown.Item>
               <NavDropdown.Item href="#products/chocolate">
-                Chocolate
+                Videos
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#products/promo">Promo</NavDropdown.Item>
+              <NavDropdown.Item href="#products/promo">Cursos</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="blog">Blog</Nav.Link>

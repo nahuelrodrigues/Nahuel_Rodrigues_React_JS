@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "../App.css";
 import logo from "../img/logo.png";
+import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
@@ -40,6 +41,7 @@ function NavBar() {
             <Nav.Link href="contact-us">Contact-Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <CartWidget />
       </Navbar>
     </div>
   );

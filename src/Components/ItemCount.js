@@ -1,14 +1,19 @@
-//Importo useState
+//Importo React y useState
 import { React, useState } from "react";
+import "bootstrap/dist/css/bootstrap.css";
+
 //Creo mi contador y le asigno stock, valor inicial y onAdd
-function ItemCount(props) {
-  const [counter, setCounter] = useState(props.initial);
+// Como ya sabemos que propiedades de props queremos,
+// Podemos reemplazarlo el parámetro {initial,stock} y despues usarlo directamente
+function ItemCount({ stock, initial }) {
+  const [counter, setCounter] = useState(initial);
   // Dibujo el contador
   return (
-    <div>
+    <div className="d-inline-flex gap-5">
       <button
+        className="btn btn-primary"
         onClick={() => {
-          if (counter < props.stock) {
+          if (counter < stock) {
             //incrementa sólo si counter es menor al stock
             setCounter(counter + 1);
           }
@@ -16,10 +21,11 @@ function ItemCount(props) {
       >
         +
       </button>
-      <p>{counter}</p>
+      <p className="fs-4">{counter}</p>
       <button
+        className="btn btn-primary "
         onClick={() => {
-          if (counter > props.initial) {
+          if (counter > initial) {
             //decrementá sólo si counter es mayor a initial
             setCounter(counter - 1);
           }

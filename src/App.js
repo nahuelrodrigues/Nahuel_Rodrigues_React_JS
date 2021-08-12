@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./Components/Navbar";
 import ItemListContainer from "./Components/ItemsListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div>

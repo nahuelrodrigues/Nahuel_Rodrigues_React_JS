@@ -17,7 +17,13 @@ function NavBar() {
         className="px-4"
       >
         <Navbar.Brand>
-          <img className="logo" src={logo} width="40px" height="40px" />
+          <img
+            className="logo"
+            alt="logo"
+            src={logo}
+            width="40px"
+            height="40px"
+          />
           <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
         </Navbar.Brand>
 

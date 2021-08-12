@@ -3,6 +3,7 @@ import { React, useState, useEffect } from "react";
 // IMPORTARLO DENTRO DE APP.JS
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 // Creo un array de objetos con mis productos
 let remoteItems = [
@@ -52,6 +53,7 @@ function ItemListContainer(props) {
   );
   return (
     <div className="fs-2 text-center">
+      <ItemDetailContainer />
       {props.greeting}
       <br></br>
       <ItemCount stock={5} initial={1} />

@@ -2,12 +2,13 @@ import React from "react";
 import NavBar from "./Components/Navbar";
 import ItemListContainer from "./Components/ItemsListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Router } from "react-router-dom";
 function App() {
   return (
     <div>
-      <NavBar />{" "}
-      <ItemListContainer greeting="Este es nuestro ItemListContainer provisional que será nuestro catálogo" />
+      <Router />
+      {/* <NavBar />{" "}
+      <ItemListContainer greeting="Este es nuestro ItemListContainer provisional que será nuestro catálogo" /> */}
     </div>
   );
 }

@@ -4,8 +4,11 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "../App.css";
 import logo from "../img/logo.png";
 import CartWidget from "./CartWidget";
+import { Link, useHistory } from "react-router-dom";
 
 function NavBar() {
+  const history = useHistory();
+
   return (
     <div className="App">
       <Navbar

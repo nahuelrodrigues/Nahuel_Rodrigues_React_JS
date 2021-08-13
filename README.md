@@ -2,16 +2,6 @@
 
 <p align="center">Proyecto E-commerce para el módulo de React.js, carrera de Desarrollo Front-End en Coder-House.</p>
 
-## Links
-
-- [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
-
-- [Live](<Homepage url> "Live View")
-
-- [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
-
-- [API](<API Link> "API")
-
 ## Screenshots
 
 ![Home Page](/screenshots/1.png "Home Page")
@@ -55,18 +45,19 @@ For running the server file on you can use this command.
 - Webpack
 - HTML
 - CSS
+- BOOTSTRAP
 
 ## Future Updates
 
-- [ ] Reliable Storage
+- [ ] Router
 
 ## Author
 
-**Rohit Jain**
+**Nahuel Rodrigues**
 
-- [Profile](https://github.com/rohit19060 "Rohit jain")
-- [Email](mailto:rohitjain19060@gmail.com?subject=Hi "Hi!")
-- [Website](https://kingtechnologies.in "Welcome")
+- [Profile](https://github.com/nahuelrodrigues "Nahuel Rodrigues")
+- [Email](mailto:rodriguesnahuel@gmail.com?subject=Hi "Hi!")
+- [Website](https://nahuelrodrigues.github.io/portfolio/ "Welcome")
 
 ## 🤝 Support
 

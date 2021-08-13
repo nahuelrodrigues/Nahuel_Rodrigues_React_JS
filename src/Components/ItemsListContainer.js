@@ -56,7 +56,7 @@ function ItemListContainer(props) {
       <ItemDetailContainer />
       {props.greeting}
       <br></br>
-      <ItemCount stock={5} initial={1} />
+      {/*  <ItemCount stock={5} initial={1} /> */}
       <br></br>
       <ItemList items={items} />
     </div>

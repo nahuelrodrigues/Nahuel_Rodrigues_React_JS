@@ -4,11 +4,9 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "../App.css";
 import logo from "../img/logo.png";
 import CartWidget from "./CartWidget";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, NavLink } from "react-router-dom";
 
 function NavBar() {
-  const history = useHistory();
-
   return (
     <div className="App">
       <Navbar
@@ -20,37 +18,50 @@ function NavBar() {
         className="px-4"
       >
         <Navbar.Brand>
-          <img
-            className="logo"
-            alt="logo"
-            src={logo}
-            width="40px"
-            height="40px"
-          />
-          <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
+          <Link to="/">
+            <img
+              className="logo"
+              alt="logo"
+              src={logo}
+              width="40px"
+              height="40px"
+            />
+            <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
+          </Link>
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
-          <Nav>
-            <NavDropdown title="Productos">
-              <NavDropdown.Item href="#productos/tea">Libros</NavDropdown.Item>
-              <NavDropdown.Item href="#productos/coffee">PDF</NavDropdown.Item>
-              <NavDropdown.Item href="#productos/chocolate">
-                Videos
-              </NavDropdown.Item>
+          <Nav className="position-absolute top-50 end-0 translate-middle-y">
+            <NavDropdown title="Categorías">
+              <Link to="/category/:categoryId">
+                {" "}
+                <NavDropdown.Item href="#categorias/tea">
+                  Libros
+                </NavDropdown.Item>
+              </Link>
+              <Link to="/category/:categoryId">
+                <NavDropdown.Item href="#productos/coffee">
+                  PDF
+                </NavDropdown.Item>
+              </Link>
+              <Link to="/category/:categoryId">
+                <NavDropdown.Item href="#productos/chocolate">
+                  Videos
+                </NavDropdown.Item>
+              </Link>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#productos/promo">
-                Cursos
-              </NavDropdown.Item>
+              <Link to="/category/:categoryId">
+                <NavDropdown.Item href="#productos/promo">
+                  Cursos
+                </NavDropdown.Item>
+              </Link>
             </NavDropdown>
-
-            <Nav.Link href="blog">Blog</Nav.Link>
-            <Nav.Link href="nosotros">Nosotros</Nav.Link>
-            <Nav.Link href="contacto">Contacto</Nav.Link>
+            <NavLink to="/nosotros">Nosotros</NavLink>
+            <NavLink to="/contacto">Contacto</NavLink>
+            <CartWidget className="gap-6" />
           </Nav>
         </Navbar.Collapse>
-        <CartWidget />
       </Navbar>
     </div>
   );

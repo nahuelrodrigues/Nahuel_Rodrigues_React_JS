@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 // >>Ejemplo inicial:
 // Desarrolla la vista de detalle expandida del producto con su imagen título, descripción y precio
 
+// APLICAR UN DISEÑO DISTINTO AL ITEMDETAILCONTAINER
+
 function ItemDetail({ item }) {
   return (
     <Link to="/item/:id">

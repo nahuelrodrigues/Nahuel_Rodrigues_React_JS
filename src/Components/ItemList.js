@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import "bootstrap/dist/css/bootstrap.min.css";
-function addItem({ id, price, title, pictureUrl }, index) {
+function addItem({ id, price, title, pictureUrl, category }, index) {
   return (
     <Item
       key={index}
@@ -9,6 +9,7 @@ function addItem({ id, price, title, pictureUrl }, index) {
       title={title}
       price={price}
       pictureUrl={pictureUrl}
+      category={category}
     />
   );
 }

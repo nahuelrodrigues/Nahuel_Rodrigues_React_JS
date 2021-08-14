@@ -34,31 +34,24 @@ function NavBar() {
         <Navbar.Collapse>
           <Nav className="position-absolute top-50 end-0 translate-middle-y">
             <NavDropdown title="Categorías">
-              <Link to="/category/:categoryId">
-                {" "}
-                <NavDropdown.Item href="#categorias/tea">
-                  Libros
-                </NavDropdown.Item>
-              </Link>
-              <Link to="/category/:categoryId">
-                <NavDropdown.Item href="#productos/coffee">
-                  PDF
-                </NavDropdown.Item>
-              </Link>
-              <Link to="/category/:categoryId">
-                <NavDropdown.Item href="#productos/chocolate">
-                  Videos
-                </NavDropdown.Item>
-              </Link>
+              <NavDropdown.Item>
+                <Link to="/category/libros">Libros </Link>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+                <Link to="/category/pdf">PDF</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to="/category/videos">Videos</Link>
+              </NavDropdown.Item>
+
               <NavDropdown.Divider />
-              <Link to="/category/:categoryId">
-                <NavDropdown.Item href="#productos/promo">
-                  Cursos
-                </NavDropdown.Item>
-              </Link>
+              <NavDropdown.Item>
+                <Link to="/category/cursos">Cursos</Link>
+              </NavDropdown.Item>
             </NavDropdown>
-            <NavLink to="/nosotros">Nosotros</NavLink>
-            <NavLink to="/contacto">Contacto</NavLink>
+            <Link to="/nosotros">Nosotros</Link>
+            <Link to="/contacto">Contacto</Link>
             <CartWidget className="gap-6" />
           </Nav>
         </Navbar.Collapse>

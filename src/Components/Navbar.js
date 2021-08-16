@@ -18,7 +18,7 @@ function NavBar() {
         className="px-4"
       >
         <Navbar.Brand>
-          <Link to="/">
+          <Nav.Link as={Link} to="/">
             <img
               className="logo"
               alt="logo"
@@ -27,7 +27,7 @@ function NavBar() {
               height="40px"
             />
             <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
-          </Link>
+          </Nav.Link>
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />
@@ -35,7 +35,9 @@ function NavBar() {
           <Nav className="position-absolute top-50 end-0 translate-middle-y">
             <NavDropdown title="Categorías">
               <NavDropdown.Item>
-                <Link to="/category/libros">Libros </Link>
+                <Link as={Link} to="/category/libros">
+                  Libros{" "}
+                </Link>
               </NavDropdown.Item>
 
               <NavDropdown.Item>
@@ -50,8 +52,12 @@ function NavBar() {
                 <Link to="/category/cursos">Cursos</Link>
               </NavDropdown.Item>
             </NavDropdown>
-            <Link to="/nosotros">Nosotros</Link>
-            <Link to="/contacto">Contacto</Link>
+            <Nav.Link as={Link} to="/nosotros">
+              Nosotros
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contacto">
+              Contacto
+            </Nav.Link>
             <CartWidget className="gap-6" />
           </Nav>
         </Navbar.Collapse>

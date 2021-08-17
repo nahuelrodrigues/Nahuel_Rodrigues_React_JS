@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import ItemCount from "./ItemCount";
-import { Link } from "react-router-dom";
+
 // >>Aspectos a incluir en el entregable:
 
 // ItemDetail.js, que debe mostrar la vista de detalle de un ítem incluyendo su descripción, una foto y el precio.

@@ -31,36 +31,32 @@ function NavBar() {
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />
-        <Navbar.Collapse>
-          <Nav className="position-absolute top-50 end-0 translate-middle-y">
-            <NavDropdown title="Categorías">
-              <NavDropdown.Item>
-                <Link as={Link} to="/category/libros">
-                  Libros{" "}
-                </Link>
-              </NavDropdown.Item>
 
-              <NavDropdown.Item>
-                <Link to="/category/pdf">PDF</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/category/videos">Videos</Link>
-              </NavDropdown.Item>
+        <Nav className="position-absolute top-50 end-0 translate-middle-y">
+          <Nav.Link as={Link} to="/category/libros">
+            Libros{" "}
+          </Nav.Link>
 
-              <NavDropdown.Divider />
-              <NavDropdown.Item>
-                <Link to="/category/cursos">Cursos</Link>
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link as={Link} to="/nosotros">
-              Nosotros
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contacto">
-              Contacto
-            </Nav.Link>
-            <CartWidget className="gap-6" />
-          </Nav>
-        </Navbar.Collapse>
+          <Nav.Link as={Link} to="/category/pdf">
+            PDF
+          </Nav.Link>
+
+          <Nav.Link as={Link} to="/category/videos">
+            Videos
+          </Nav.Link>
+
+          <Nav.Link as={Link} to="/category/cursos">
+            Cursos
+          </Nav.Link>
+
+          <Nav.Link as={Link} to="/nosotros">
+            Nosotros
+          </Nav.Link>
+          <Nav.Link as={Link} to="/contacto">
+            Contacto
+          </Nav.Link>
+          <CartWidget className="gap-6" />
+        </Nav>
       </Navbar>
     </div>
   );

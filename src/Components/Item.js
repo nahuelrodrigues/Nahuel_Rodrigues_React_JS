@@ -8,7 +8,7 @@ import ItemCount from "./ItemCount";
 
 function Item({ id, title, price, pictureUrl }) {
   return (
-    <Link to="/item/:id">
+    <Link to={`/item/${id}`}>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={pictureUrl} />
         <Card.Body>
@@ -16,7 +16,7 @@ function Item({ id, title, price, pictureUrl }) {
           <Card.Text>Detalle del producto.</Card.Text>
           <p>${price}</p>
           <ItemCount stock={5} initial={1} />
-          <Button variant="primary">Agregar al carrito</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
     </Link>

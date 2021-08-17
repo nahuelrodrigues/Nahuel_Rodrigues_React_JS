@@ -45,26 +45,29 @@ let remoteItems = [
 function ItemListContainer(props) {
   // creo un efecto de montaje para emitir un llamado asincrónico
   const [items, setItems] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([]);
-  const slug = useParams();
+  // const [filteredItems, setFilteredItems] = useState([]);
+  // const slug = useParams();
   useEffect(() => {
     setTimeout(async () => {
-      // setItems(remoteItems);
-      setFilteredItems(remoteItems.filter((item) => item.category === slug.id));
+      setItems(remoteItems);
+      // setFilteredItems(remoteItems.filter((item) => item.category === slug.id));
     }, 3000);
 
     //espera unos segs y setea el estado items a remoteItems
   }, []);
 
-  return <ItemList items={filteredItems} />;
-  // <div className="fs-2 text-center">
-  //   <ItemDetailContainer />
-  //   {props.greeting}
-  //   <br></br>
-  //   {/*  <ItemCount stock={5} initial={1} /> */}
-  //   <br></br>
-  //   <ItemList items={items} />
-  // </div>
+  return (
+    /*   <ItemList items={remoteItems} /> */
+    <div className="fs-2 text-center">
+      {/* <ItemDetailContainer /> */}
+      {props.greeting}
+      <br></br>
+      {/* <ItemCount stock={5} initial={1} /> */}
+      <br></br>
+
+      <ItemList items={items} />
+    </div>
+  );
 }
 
 export default ItemListContainer;

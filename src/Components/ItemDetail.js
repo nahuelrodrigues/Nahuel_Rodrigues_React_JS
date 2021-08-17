@@ -13,18 +13,16 @@ import { Link } from "react-router-dom";
 
 function ItemDetail({ item }) {
   return (
-    <Link to="/item/:id">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={item.pictureUrl} />
-        <Card.Body>
-          <Card.Title>{item.title}</Card.Title>
-          <Card.Text>Detalle del producto.</Card.Text>
-          <p>${item.price}</p>
-          <ItemCount stock={5} initial={1} />
-          <Button variant="primary">Agregar al carrito</Button>
-        </Card.Body>
-      </Card>
-    </Link>
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={item.pictureUrl} />
+      <Card.Body>
+        <Card.Title>{item.title}</Card.Title>
+        <Card.Text>Detalle del producto.</Card.Text>
+        <p>${item.price}</p>
+        <ItemCount stock={5} initial={1} />
+        <Button variant="primary">Agregar al carrito</Button>
+      </Card.Body>
+    </Card>
   );
 }
 

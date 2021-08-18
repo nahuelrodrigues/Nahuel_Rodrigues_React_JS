@@ -4,11 +4,7 @@
 
 ## Screenshots
 
-![Home Page](/screenshots/1.png "Home Page")
-
-![](/screenshots/2.png)
-
-![](/screenshots/3.png)
+![Buncits](https://s5.gifyu.com/images/EdTech.js.md.gif)
 
 ## Available Commands
 

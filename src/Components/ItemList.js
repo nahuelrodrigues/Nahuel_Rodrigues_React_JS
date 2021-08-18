@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Item from "./Item";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { useParams } from "react-router-dom";
 function addItem({ id, price, title, pictureUrl, category }, index) {
   return (
     <Item
@@ -16,11 +16,16 @@ function addItem({ id, price, title, pictureUrl, category }, index) {
 }
 
 function ItemList({ items }) {
-  return (
-    <div className="d-flex m-auto justify-content-center flex-wrap">
-      {items.map(addItem)}
-    </div>
-  );
+  const { categoryId } = useParams();
+  return categoryId
+    ? items
+        .filter((products) => products.category == categoryId)
+        .map((products) => addItem(products))
+    : items.map((products) => addItem(products));
+
+  // <div className="d-flex m-auto justify-content-center flex-wrap">
+  //   {items.map(addItem)}
+  // </div>
 }
 
 export default ItemList;

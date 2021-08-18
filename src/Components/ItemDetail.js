@@ -2,15 +2,6 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 
-// >>Aspectos a incluir en el entregable:
-
-// ItemDetail.js, que debe mostrar la vista de detalle de un ítem incluyendo su descripción, una foto y el precio.
-
-// >>Ejemplo inicial:
-// Desarrolla la vista de detalle expandida del producto con su imagen título, descripción y precio
-
-// APLICAR UN DISEÑO DISTINTO AL ITEMDETAILCONTAINER
-
 function ItemDetail({ item }) {
   return (
     <Card style={{ width: "18rem" }}>

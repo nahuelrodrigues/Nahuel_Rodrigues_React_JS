@@ -11,7 +11,7 @@ function ItemCount({ stock, initial }) {
   return (
     <div className="d-inline-flex gap-5">
       <button
-        className="btn btn-primary"
+        className="btn btn-dark"
         onClick={() => {
           if (counter < stock) {
             //incrementa sólo si counter es menor al stock
@@ -21,9 +21,9 @@ function ItemCount({ stock, initial }) {
       >
         +
       </button>
-      <p className="fs-4">{counter}</p>
+      <p className="fs-6">{counter}</p>
       <button
-        className="btn btn-primary "
+        className="btn btn-dark "
         onClick={() => {
           if (counter > initial) {
             //decrementá sólo si counter es mayor a initial

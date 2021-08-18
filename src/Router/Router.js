@@ -9,9 +9,8 @@ const Router = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        {/*    <ItemListContainer greeting="Este es nuestro ItemListContainer provisional que será nuestro catálogo" /> */}
         <Route exact path="/" component={ItemListContainer} />
-        <Route path="/category/:id" component={ItemListContainer} />
+        <Route path="/category/:categoryId" component={ItemListContainer} />
         <Route path="/item/:itemId" component={ItemDetailContainer} />
       </Switch>
     </BrowserRouter>

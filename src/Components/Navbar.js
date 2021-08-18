@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 import "../App.css";
 import "./Navbar.css";
 import logo from "../img/logo.png";
@@ -18,57 +18,47 @@ function NavBar() {
         collapseOnSelect
         className="px-4"
       >
-        <Navbar.Brand>
-          <Nav.Link
-            style={{ textDecoration: "none", color: "white" }}
-            as={Link}
-            to="/"
-          >
-            <img
-              className="logo"
-              alt="logo"
-              src={logo}
-              width="40px"
-              height="40px"
-            />
-            <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
-          </Nav.Link>
-        </Navbar.Brand>
+        <Container>
+          <Navbar.Brand>
+            <Nav.Link
+              style={{ textDecoration: "none", color: "white" }}
+              as={Link}
+              to="/"
+            >
+              <img
+                className="logo"
+                alt="logo"
+                src={logo}
+                width="40px"
+                height="40px"
+              />
+              <h1 className="d-inline fs-4 align-middle px-3">EdTech.js</h1>
+            </Nav.Link>
+          </Navbar.Brand>
 
-        <Navbar.Toggle className="coloring" />
-        <Navbar.Collapse>
-          <Nav className="position-absolute top-50 end-0 translate-middle-y">
-            <NavDropdown title="Categorías">
-              <NavDropdown.Item>
-                <Nav.Link as={Link} to="/category/libros">
-                  Libros{" "}
-                </Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Nav.Link as={Link} to="/category/pdf">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <NavDropdown title="Categorías" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/category/libros">
+                  Libros
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/pdf">
                   PDF
-                </Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Nav.Link as={Link} to="/category/videos">
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/videos">
                   Videos
-                </Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Nav.Link as={Link} to="/category/cursos">
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item as={Link} to="/category/cursos">
                   Cursos
-                </Nav.Link>
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link as={Link} to="/nosotros">
-              Nosotros
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contacto">
-              Contacto
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#home">Nosotros</Nav.Link>
+              <Nav.Link href="#link">Contacto</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
         <CartWidget className="gap-1" />
       </Navbar>
     </div>

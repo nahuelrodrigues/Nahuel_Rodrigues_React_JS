@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-![Buncits](https://s5.gifyu.com/images/EdTech.js.md.gif)
+![Buncits](https://s5.gifyu.com/images/EdTech.jsc157c1eecdc2544e.gif)
 
 ## Available Commands
 

@@ -4,8 +4,7 @@ export let remoteItems = [
     title: "producto1",
     price: 300,
     category: "libros",
-    pictureUrl:
-      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+    pictureUrl: "../images/Products/libro1.jpg",
   },
   {
     id: 1,

@@ -17,7 +17,7 @@ function ItemDetailContainer() {
     getItem(itemId);
   }, []);
 
-  return <ItemDetail item={item} />;
+  return <ItemDetail className="" item={item} />;
 }
 
 export default ItemDetailContainer;

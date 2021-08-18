@@ -20,7 +20,7 @@ function ItemListContainer(props) {
   };
 
   return (
-    <div className="fs-2 text-center d-flex m-auto justify-content-center flex-wrap">
+    <div className="fs-5 text-center d-flex m-auto justify-content-center flex-wrap">
       <ItemList className="" items={items} />
     </div>
   );

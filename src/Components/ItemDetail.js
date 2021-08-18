@@ -4,14 +4,16 @@ import ItemCount from "./ItemCount";
 
 function ItemDetail({ item }) {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="text-center m-auto" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={item.pictureUrl} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
         <Card.Text>Detalle del producto.</Card.Text>
         <p>${item.price}</p>
         <ItemCount stock={5} initial={1} />
-        <Button variant="primary">Agregar al carrito</Button>
+        <Button className="mt-4" variant="btn btn-dark">
+          Agregar al carrito
+        </Button>
       </Card.Body>
     </Card>
   );

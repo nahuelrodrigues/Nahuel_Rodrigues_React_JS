@@ -38,7 +38,7 @@ function NavBar() {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto ">
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/category/libros">
                   Libros
@@ -54,12 +54,16 @@ function NavBar() {
                   Cursos
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#home">Nosotros</Nav.Link>
-              <Nav.Link href="#link">Contacto</Nav.Link>
+              <Nav.Link as={Link} to="/Nosotros">
+                Nosotros
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Contacto">
+                Contacto
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          <CartWidget className="" />
         </Container>
-        <CartWidget className="gap-1" />
       </Navbar>
     </div>
   );

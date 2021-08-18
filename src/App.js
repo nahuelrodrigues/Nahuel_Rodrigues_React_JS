@@ -7,8 +7,6 @@ function App() {
   return (
     <div>
       <Router />
-      {/* <NavBar />{" "}
-      <ItemListContainer greeting="Este es nuestro ItemListContainer provisional que será nuestro catálogo" /> */}
     </div>
   );
 }

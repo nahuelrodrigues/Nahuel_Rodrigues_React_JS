@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { AllProducts } from "../helpers/AllProducts";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function ItemListContainer(props) {
   const [items, setItems] = useState([]);
@@ -19,15 +20,8 @@ function ItemListContainer(props) {
   };
 
   return (
-    /*   <ItemList items={remoteItems} /> */
-    <div className="fs-2 text-center">
-      {/* <ItemDetailContainer /> */}
-      {props.greeting}
-      <br></br>
-      {/* <ItemCount stock={5} initial={1} /> */}
-      <br></br>
-
-      <ItemList items={items} />
+    <div className="fs-2 text-center ">
+      <ItemList className="" items={items} />
     </div>
   );
 }

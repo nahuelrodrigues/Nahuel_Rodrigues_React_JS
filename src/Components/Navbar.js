@@ -5,7 +5,7 @@ import "../App.css";
 import "./Navbar.css";
 import logo from "../img/logo.png";
 import CartWidget from "./CartWidget";
-import { Link, useHistory, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -19,7 +19,11 @@ function NavBar() {
         className="px-4"
       >
         <Navbar.Brand>
-          <Nav.Link as={Link} to="/">
+          <Nav.Link
+            style={{ textDecoration: "none", color: "white" }}
+            as={Link}
+            to="/"
+          >
             <img
               className="logo"
               alt="logo"
@@ -65,7 +69,7 @@ function NavBar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <CartWidget className="gap-6" />
+        <CartWidget className="gap-1" />
       </Navbar>
     </div>
   );

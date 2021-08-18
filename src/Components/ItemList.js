@@ -16,7 +16,11 @@ function addItem({ id, price, title, pictureUrl, category }, index) {
 }
 
 function ItemList({ items }) {
-  return <div className="d-inline-flex">{items.map(addItem)}</div>;
+  return (
+    <div className="d-flex m-auto justify-content-center flex-wrap">
+      {items.map(addItem)}
+    </div>
+  );
 }
 
 export default ItemList;

@@ -8,18 +8,18 @@ import ItemCount from "./ItemCount";
 
 function Item({ id, title, price, pictureUrl }) {
   return (
-    <Link to={`/item/${id}`}>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={pictureUrl} />
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>Detalle del producto.</Card.Text>
-          <p>${price}</p>
-          <ItemCount stock={5} initial={1} />
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={pictureUrl} />
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>Detalle del producto.</Card.Text>
+        <p>${price}</p>
+        <ItemCount stock={5} initial={1} />
+        <Link to={`/item/${id}`}>
           <Button variant="primary">Ver detalles</Button>
-        </Card.Body>
-      </Card>
-    </Link>
+        </Link>
+      </Card.Body>
+    </Card>
   );
 }
 

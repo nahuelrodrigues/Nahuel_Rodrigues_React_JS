@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "../App.css";
+import "./Navbar.css";
 import logo from "../img/logo.png";
 import CartWidget from "./CartWidget";
 import { Link, useHistory, NavLink } from "react-router-dom";
@@ -31,32 +32,40 @@ function NavBar() {
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />
+        <Navbar.Collapse>
+          <Nav className="position-absolute top-50 end-0 translate-middle-y">
+            <NavDropdown title="Categorías">
+              <NavDropdown.Item>
+                <Nav.Link as={Link} to="/category/libros">
+                  Libros{" "}
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link as={Link} to="/category/pdf">
+                  PDF
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link as={Link} to="/category/videos">
+                  Videos
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link as={Link} to="/category/cursos">
+                  Cursos
+                </Nav.Link>
+              </NavDropdown.Item>
+            </NavDropdown>
 
-        <Nav className="position-absolute top-50 end-0 translate-middle-y">
-          <Nav.Link as={Link} to="/category/libros">
-            Libros{" "}
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/category/pdf">
-            PDF
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/category/videos">
-            Videos
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/category/cursos">
-            Cursos
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/nosotros">
-            Nosotros
-          </Nav.Link>
-          <Nav.Link as={Link} to="/contacto">
-            Contacto
-          </Nav.Link>
-          <CartWidget className="gap-6" />
-        </Nav>
+            <Nav.Link as={Link} to="/nosotros">
+              Nosotros
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contacto">
+              Contacto
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        <CartWidget className="gap-6" />
       </Navbar>
     </div>
   );

@@ -1,0 +1,12 @@
+.dropdown-item a {
+  color: black !important;
+}
+
+a.dropdown-item:active {
+  background-color: gray !important;
+}
+
+.navbar {
+  flex: wrap !important;
+  height: auto !important;
+}

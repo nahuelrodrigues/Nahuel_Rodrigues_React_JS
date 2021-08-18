@@ -1,34 +1,31 @@
 export let remoteItems = [
   {
-    id: 0,
-    title: "producto1",
+    id: 1,
+    title: "React Js - The Ultimate Beginner's Guide",
     price: 300,
     category: "libros",
     pictureUrl: "../images/Products/libro1.jpg",
   },
   {
-    id: 1,
-    title: "producto2",
+    id: 2,
+    title: "ReactJS Tutorial",
     price: 400,
     category: "videos",
-    pictureUrl:
-      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
-  },
-  {
-    id: 2,
-    title: "producto3",
-    category: "libros",
-    price: 500,
-    pictureUrl:
-      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+    pictureUrl: "../images/Products/video1.jpg",
   },
   {
     id: 3,
-    title: "producto4",
+    title: "JavaScript For Impatient Programmers",
+    category: "libros",
+    price: 500,
+    pictureUrl: "../images/Products/libro2.jpg",
+  },
+  {
+    id: 4,
+    title: "How To Learn React.JS",
     category: "videos",
     price: 600,
-    pictureUrl:
-      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+    pictureUrl: "../images/Products/video2.jpg",
   },
 ];
 

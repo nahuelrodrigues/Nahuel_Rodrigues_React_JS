@@ -2,7 +2,7 @@ import Item from "./Item";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
 
-function addItem({ id, price, title, pictureUrl, category }, index) {
+function addItem({ id, price, title, pictureUrl, category, stock }, index) {
   return (
     <div className="">
       <Item
@@ -12,6 +12,7 @@ function addItem({ id, price, title, pictureUrl, category }, index) {
         price={price}
         pictureUrl={pictureUrl}
         category={category}
+        stock={stock}
       />
     </div>
   );

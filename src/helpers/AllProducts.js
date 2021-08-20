@@ -5,6 +5,7 @@ export let remoteItems = [
     price: 300,
     category: "libros",
     pictureUrl: "../images/Products/libro1.jpg",
+    stock: 5,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export let remoteItems = [
     price: 400,
     category: "videos",
     pictureUrl: "../images/Products/video1.jpg",
+    stock: 2,
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export let remoteItems = [
     category: "libros",
     price: 500,
     pictureUrl: "../images/Products/libro2.jpg",
+    stock: 1,
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export let remoteItems = [
     category: "videos",
     price: 600,
     pictureUrl: "../images/Products/video2.jpg",
+    stock: 3,
   },
 ];
 

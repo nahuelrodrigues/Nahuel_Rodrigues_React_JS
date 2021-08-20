@@ -1,7 +1,8 @@
 import Item from "./Item";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
-
+import { useEffect } from "react";
+import { remoteItems } from "../helpers/AllProducts";
 function addItem({ id, price, title, pictureUrl, category, stock }, index) {
   return (
     <div className="">
@@ -19,7 +20,13 @@ function addItem({ id, price, title, pictureUrl, category, stock }, index) {
 }
 
 function ItemList({ items }) {
+  //Guardo en el localStorage
+  useEffect(() => {
+    localStorage.setItem("remoteItems", JSON.stringify(remoteItems));
+  }, [remoteItems]);
+  //creo un parametro por id
   const { categoryId } = useParams();
+  //filtro
   return categoryId
     ? items
         .filter((products) => products.category == categoryId)

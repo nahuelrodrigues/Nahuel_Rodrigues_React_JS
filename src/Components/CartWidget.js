@@ -1,10 +1,12 @@
-// ACÁ TENGO QUE CREAR UN ÍCONO DE CARRITO REACT-BOOTSTRAP
-// UBICARLO EN EL NAVBAR
 import React from "react";
-
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function CartWidget() {
-  return <FaShoppingCart size="1.5rem" color="white" className="" />;
+  return (
+    <Link to="/cart">
+      <FaShoppingCart size="1.5rem" color="white" className="" />
+    </Link>
+  );
 }
 export default CartWidget;

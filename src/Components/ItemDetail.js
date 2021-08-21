@@ -7,7 +7,7 @@ import { CartContext } from "./Context/CartContext";
 
 function ItemDetail({ item }) {
   // const [selectedItem, setSelectedItem]
-  const { addItem } = useContext(CartContext);
+  // const { addItem } = useContext(CartContext);
 
   //CLASE 9
   const [quantityToAdd, setQuantityToAdd] = useState(0);

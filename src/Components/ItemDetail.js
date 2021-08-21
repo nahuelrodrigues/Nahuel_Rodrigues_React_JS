@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import { Card } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import { CartContext } from "./Context/CartContext";
 
 function ItemDetail({ item }) {
+  // const [selectedItem, setSelectedItem]
+  const { addItem } = useContext(CartContext);
+
   //CLASE 9
   const [quantityToAdd, setQuantityToAdd] = useState(0);
   const onAdd = (i) => {
@@ -20,7 +24,7 @@ function ItemDetail({ item }) {
         <p>${item.price}</p>
 
         {quantityToAdd > 0 ? (
-          <Link to="/cart">
+          <Link to="/cart" /* onClick={() => addItem(item, selectedItem)} */>
             <button className="btn btn-dark">
               Agregar {quantityToAdd} al carrito
             </button>

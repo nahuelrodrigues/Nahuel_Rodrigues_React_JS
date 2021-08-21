@@ -1,12 +1,14 @@
 import React from "react";
-import NavBar from "./Components/Navbar";
-import ItemListContainer from "./Components/ItemsListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Router from "./Router/Router";
+import CartContext from "./Components/Context/CartContext";
+
 function App() {
   return (
     <div>
-      <Router />
+      <CartContext.Provider>
+        <Router />
+      </CartContext.Provider>
     </div>
   );
 }

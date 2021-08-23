@@ -31,6 +31,46 @@ export let remoteItems = [
     pictureUrl: "../images/Products/video2.jpg",
     stock: 3,
   },
+  {
+    id: 5,
+    title: "JavaScript Definitivo",
+    category: "pdf",
+    price: 600,
+    pictureUrl: "../images/Products/pdf1.jpg",
+    stock: 3,
+  },
+  {
+    id: 6,
+    title: "Frameworkless Front-End Development",
+    category: "pdf",
+    price: 600,
+    pictureUrl: "../images/Products/pdf2.jpg",
+    stock: 3,
+  },
+  {
+    id: 7,
+    title: "How To Learn React.JS",
+    category: "pdf",
+    price: 600,
+    pictureUrl: "../images/Products/pdf3.jpg",
+    stock: 3,
+  },
+  {
+    id: 8,
+    title: "Introducing Web Deveopment",
+    category: "libros",
+    price: 600,
+    pictureUrl: "../images/Products/libro3.jpg",
+    stock: 3,
+  },
+  {
+    id: 9,
+    title: "JavaScript Crash Course",
+    category: "videos",
+    price: 600,
+    pictureUrl: "../images/Products/video3.jpg",
+    stock: 3,
+  },
 ];
 
 export const AllProducts = async () => {

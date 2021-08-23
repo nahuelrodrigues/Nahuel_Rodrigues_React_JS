@@ -6,13 +6,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import { CartContext } from "./Context/CartContext";
 
 function ItemDetail({ item }) {
-  // const [selectedItem, setSelectedItem]
-  // const { addItem } = useContext(CartContext);
+  const [selectedItem, setSelectedItem] = useState(0);
+  const { addItem } = useContext(CartContext);
 
   //CLASE 9
-  const [quantityToAdd, setQuantityToAdd] = useState(0);
-  const onAdd = (i) => {
-    setQuantityToAdd(i);
+  /*  const [quantityToAdd, setQuantityToAdd] = useState(0); */
+  const onAdd = (quantity) => {
+    setSelectedItem(quantity);
+    addItem(item, quantity);
   };
 
   return (
@@ -23,10 +24,10 @@ function ItemDetail({ item }) {
         <Card.Text>Detalle del producto.</Card.Text>
         <p>${item.price}</p>
 
-        {quantityToAdd > 0 ? (
-          <Link to="/cart" /* onClick={() => addItem(item, selectedItem)} */>
+        {setSelectedItem > 0 ? (
+          <Link to="/cart" onClick={() => addItem(item, selectedItem)}>
             <button className="btn btn-dark">
-              Agregar {quantityToAdd} al carrito
+              Agregar {setSelectedItem} al carrito
             </button>
           </Link>
         ) : (

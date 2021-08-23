@@ -5,12 +5,13 @@ import { useContext } from "react";
 import { CartContext } from "../Components/Context/CartContext";
 
 function CartWidget() {
+  // me traigo la función cartSize de mi context
   const { cartSize } = useContext(CartContext);
-  console.log(cartSize);
+  /* console.log(cartSize); */
   return (
     <Link to="/cart">
       <FaShoppingCart size="1.5rem" color="white" className="" />
-      <span style={{ marginRight: 100 }}>{cartSize()}</span>
+      <span style={{ marginRight: 200 }}>{cartSize()}</span>
     </Link>
   );
 }

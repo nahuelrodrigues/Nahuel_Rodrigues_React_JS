@@ -5,22 +5,30 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../Components/Context/CartContext";
 import { FaTrashAlt } from "react-icons/fa";
 
+/* const sumaTotal = () => {
+  const { items } = useContext(CartContext);
+  items.reduce((acc, cur) => acc + cur.price);
+  console.log(sumaTotal());
+}; */
+
 const Cart = () => {
   const { items, cartSize } = useContext(CartContext);
-  console.log("probando", items);
+  console.log("items", items);
   console.log("cartsize", cartSize);
   return (
     <div>
       <div className="container padding-bottom-3x mb-1">
         {/* Shopping Cart*/}
         <div className="table-responsive shopping-cart">
+          {/* COMIENZO DE TABLA */}
           <table className="table">
+            {/*  COMIENZO DEL ENCABEZADO DE LA TABLA */}
             <thead>
               <tr>
                 <th>Producto</th>
                 <th className="text-center">Cantidad</th>
                 <th className="text-center">Subtotal</th>
-                <th className="text-center">Descuento</th>
+
                 <th className="text-center">
                   <a className="btn btn-sm btn-outline-danger" href="#">
                     Vaciar
@@ -28,7 +36,7 @@ const Cart = () => {
                 </th>
               </tr>
             </thead>
-            {/*  COMIENZO DE CUERPO */}
+            {/*  COMIENZO DEL CUERPO */}
             <tbody>
               {/* COMIENZO DE ITEM */}
               {cartSize > 0 ? (
@@ -59,16 +67,14 @@ const Cart = () => {
                     <td className="text-center">
                       <div className="count-input">
                         <select className="form-control">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                          <option>{product.quantity}</option>
                         </select>
                       </div>
                     </td>
-                    <td className="text-center text-lg text-medium">$43.90</td>
-                    <td className="text-center text-lg text-medium">$18.00</td>
+                    <td className="text-center text-lg text-medium">
+                      ${product.item.price}
+                    </td>
+
                     <td className="text-center">
                       <a
                         className="remove-from-cart"
@@ -83,8 +89,11 @@ const Cart = () => {
                   </tr>
                 ))
               ) : (
-                <Link to="/">
-                  No hay productos, <u>volver a inicio</u>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", textAlign: "center" }}
+                >
+                  No hay productos, volver a inicio
                 </Link>
               )}
               {/*   FIN DE ITEMS  */}
@@ -101,12 +110,15 @@ const Cart = () => {
                 required
               />
               <button className="btn btn-outline-primary btn-sm" type="submit">
-                Apply Coupon
+                Aplicar Cupón
               </button>
             </form>
           </div>
           <div className="column text-lg">
-            Subtotal: <span className="text-medium">$289.68</span>
+            Total:{" "}
+            <span className="text-medium">
+              ${items.reduce((acc, cur) => acc + cur.item.price, 0)}
+            </span>
           </div>
         </div>
         <div className="shopping-cart-footer">

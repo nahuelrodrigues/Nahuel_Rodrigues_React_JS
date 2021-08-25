@@ -12,7 +12,7 @@ import { FaTrashAlt } from "react-icons/fa";
 }; */
 
 const Cart = () => {
-  const { items, cartSize } = useContext(CartContext);
+  const { items, cartSize, clear } = useContext(CartContext);
   console.log("items", items);
   console.log("cartsize", cartSize);
   return (
@@ -30,7 +30,10 @@ const Cart = () => {
                 <th className="text-center">Subtotal</th>
 
                 <th className="text-center">
-                  <a className="btn btn-sm btn-outline-danger" href="#">
+                  <a
+                    className="btn btn-sm btn-outline-danger"
+                    onClick={() => clear()}
+                  >
                     Vaciar
                   </a>
                 </th>
@@ -56,10 +59,10 @@ const Cart = () => {
                             <a href="#">{product.item.title}</a>
                           </h4>
                           <span>
-                            <em>Size:</em> 10.5
+                            <em>Autor:</em> XXXX
                           </span>
                           <span>
-                            <em>Color:</em> Dark Blue
+                            <em>Institución:</em> XXXX
                           </span>
                         </div>
                       </div>

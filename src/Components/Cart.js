@@ -117,7 +117,11 @@ const Cart = () => {
           <div className="column text-lg">
             Total:{" "}
             <span className="text-medium">
-              ${items.reduce((acc, cur) => acc + cur.item.price, 0)}
+              $
+              {items.reduce(
+                (acc, cur) => cur.item.price * cur.quantity + acc,
+                0
+              )}
             </span>
           </div>
         </div>

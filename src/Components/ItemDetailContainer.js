@@ -18,6 +18,12 @@ function ItemDetailContainer() {
   }, []);
 
   return <ItemDetail className="" item={item} />;
+  // return (
+  //   <>
+  //     {loading && <h1>Cargando...</h1>}
+  //     {!loading && <ItemDetail className="" item={item} />}
+  //   </>
+  // );
 }
 
 export default ItemDetailContainer;

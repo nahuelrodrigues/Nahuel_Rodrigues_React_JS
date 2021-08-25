@@ -19,6 +19,27 @@ function ItemListContainer(props) {
     }
   };
 
+  // LOADING
+  //////////////////////////////////////////////
+  // const [loading, setLoading] = useState("");
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  // }, []);
+
+  // return (
+  //   <>
+  //     {loading ? (
+  //       <h1>Loading...</h1>
+  //     ) : (
+  //       <div className="fs-5  text-center d-flex m-auto justify-content-center flex-wrap ">
+  //         <ItemList className="" items={items} />
+  //       </div>
+  //     )}
+  //   </>
+  // );
+  //////////////////////////////////////////////
   return (
     <div className="fs-5  text-center d-flex m-auto justify-content-center flex-wrap ">
       <ItemList className="" items={items} />

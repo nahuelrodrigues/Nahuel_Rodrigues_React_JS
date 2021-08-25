@@ -20,12 +20,13 @@ export const CartProvider = ({ children }) => {
   const removeItem = (id) => {
     setItems(items.filter((e) => e.item.id !== id));
   };
+
   //agregar items
   const addItem = (item, quantity) => {
     if (isInCart(item.id)) {
       setItems(
         items.map((i) => {
-          if (i.item.id === item.id) i.quantity = i.quantity + quantity;
+          if (i.item.id === item.id) i.quantity = i.quantity += quantity;
           return i;
         })
       );

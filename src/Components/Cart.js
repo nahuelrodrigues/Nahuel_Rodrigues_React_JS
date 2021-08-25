@@ -12,7 +12,7 @@ import { FaTrashAlt } from "react-icons/fa";
 }; */
 
 const Cart = () => {
-  const { items, cartSize, clear } = useContext(CartContext);
+  const { items, cartSize, clear, removeItem } = useContext(CartContext);
   console.log("items", items);
   console.log("cartsize", cartSize);
   return (
@@ -86,7 +86,12 @@ const Cart = () => {
                         title
                         data-original-title="Remove item"
                       >
-                        <FaTrashAlt size="" color="red" className="" />
+                        <FaTrashAlt
+                          onClick={() => removeItem()}
+                          size=""
+                          color="red"
+                          className=""
+                        />
                       </a>
                     </td>
                   </tr>
@@ -94,7 +99,8 @@ const Cart = () => {
               ) : (
                 <Link
                   to="/"
-                  style={{ textDecoration: "none", textAlign: "center" }}
+                  style={{ textDecoration: "none" }}
+                  className="text-center"
                 >
                   No hay productos, volver a inicio
                 </Link>

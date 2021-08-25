@@ -11,8 +11,14 @@ function CartWidget() {
   return (
     cartSize === 0 || (
       <Link to="/cart">
-        <FaShoppingCart size="1.5rem" color="white" className="" />
-        <span style={{ marginRight: 200 }}>{cartSize}</span>
+        <FaShoppingCart
+          size="1.5rem"
+          color="white"
+          className=" position-relative"
+        />
+        <span className="top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {cartSize}
+        </span>
       </Link>
     )
   );

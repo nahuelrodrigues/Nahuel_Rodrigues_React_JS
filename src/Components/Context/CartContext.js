@@ -14,7 +14,8 @@ export const CartProvider = ({ children }) => {
   /* mostrar cantidad de productos únicos agregados al carrito */
   /*   const cartSize = () => items.length; */
   /* mostrar cantidad total de productos agregados al carrito */
-  const cartSize = () => items.reduce((acc, cur) => acc + cur.quantity, 0);
+  const cartSize =
+    items.length > 0 ? items.reduce((acc, cur) => acc + cur.quantity, 0) : 0;
   //remover items
   const removeItem = (id) => {
     setItems(items.filter((e) => e.item.id !== id));

@@ -75,7 +75,7 @@ const Cart = () => {
                       </div>
                     </td>
                     <td className="text-center text-lg text-medium">
-                      ${product.item.price}
+                      ${product.item.price * product.quantity}
                     </td>
 
                     <td className="text-center">

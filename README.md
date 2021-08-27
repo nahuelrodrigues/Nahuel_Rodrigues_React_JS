@@ -45,8 +45,7 @@ For running the server file on you can use this command.
 
 ## Future Updates
 
-- [ ] Router
-- [ ] Mover IMG a public
+- [ ] Implement Firebase
 
 ## Author
 

@@ -6,7 +6,7 @@ export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   //checkear si está en cart
   const isInCart = (id) => items.find((e) => e.item.id === id) !== undefined;
-  // borrar
+  // borrar todo lo que hay en el cart
   const clear = () => {
     setItems([]);
   };
@@ -16,7 +16,25 @@ export const CartProvider = ({ children }) => {
   /* mostrar cantidad total de productos agregados al carrito */
   const cartSize =
     items.length > 0 ? items.reduce((acc, cur) => acc + cur.quantity, 0) : 0;
-  //remover items
+
+  //
+  const getItem = (id) => items.find((e) => e.item.id === id);
+
+  // función para remover 1 sólo item
+  const removeItems = (id, ammount) => {
+    if (getItem(id).quantity > ammount) {
+      setItems(
+        items.map((e) => {
+          if (e.item.id === id) e.quantity -= ammount;
+          return e;
+        })
+      );
+    } else {
+      removeItem(id);
+    }
+  };
+
+  //remover 1 item
   const removeItem = (id) => {
     setItems(items.filter((e) => e.item.id !== id));
   };
@@ -42,7 +60,15 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ items, addItem, isInCart, removeItem, clear, cartSize }}
+      value={{
+        items,
+        addItem,
+        isInCart,
+        removeItem,
+        clear,
+        cartSize,
+        removeItems,
+      }}
     >
       {children}
     </CartContext.Provider>

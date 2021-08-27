@@ -12,7 +12,7 @@ import { FaTrashAlt } from "react-icons/fa";
 }; */
 
 const Cart = () => {
-  const { items, cartSize, clear, removeItem } = useContext(CartContext);
+  const { items, cartSize, clear, removeItems } = useContext(CartContext);
   console.log("items", items);
   console.log("cartsize", cartSize);
   return (
@@ -87,7 +87,7 @@ const Cart = () => {
                         data-original-title="Remove item"
                       >
                         <FaTrashAlt
-                          onClick={() => removeItem()}
+                          onClick={() => removeItems(product.item.id, 1)}
                           size=""
                           color="red"
                           className=""
@@ -97,11 +97,7 @@ const Cart = () => {
                   </tr>
                 ))
               ) : (
-                <Link
-                  to="/"
-                  style={{ textDecoration: "none" }}
-                  className="text-center"
-                >
+                <Link to="/" style={{ textDecoration: "none" }}>
                   No hay productos, volver a inicio
                 </Link>
               )}
@@ -118,7 +114,7 @@ const Cart = () => {
                 placeholder="Código del Cupón"
                 required
               />
-              <button className="btn btn-outline-primary btn-sm" type="submit">
+              <button className="btn btn-outline-primary btn-sm">
                 Aplicar Cupón
               </button>
             </form>
@@ -142,18 +138,6 @@ const Cart = () => {
             </Link>
           </div>
           <div className="column">
-            <a
-              className="btn btn-primary"
-              href="#"
-              data-toast
-              data-toast-type="success"
-              data-toast-position="topRight"
-              data-toast-icon="icon-circle-check"
-              data-toast-title="Your cart"
-              data-toast-message="is updated successfully!"
-            >
-              Actualizar
-            </a>
             <a className="btn btn-success" href="#">
               Comprar
             </a>

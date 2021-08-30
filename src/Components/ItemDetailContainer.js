@@ -13,6 +13,7 @@ function ItemDetailContainer() {
     setItem(UnItem);
   };
 
+  // ACÁ REEMPLAZAR POR PRODUCTOS DE FIRESTORE
   useEffect(() => {
     getItem(itemId);
   }, []);

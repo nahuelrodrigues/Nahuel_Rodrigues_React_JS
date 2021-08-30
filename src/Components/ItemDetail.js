@@ -7,11 +7,8 @@ import { CartContext } from "./Context/CartContext";
 
 function ItemDetail({ item }) {
   const [selectedItem, setSelectedItem] = useState(0);
-  //me traigo la función addItem de mi context
   const { addItem } = useContext(CartContext);
 
-  //CLASE 9
-  /*  const [quantityToAdd, setQuantityToAdd] = useState(0); */
   const onAdd = (quantity) => {
     setSelectedItem(quantity);
     addItem(item, quantity);

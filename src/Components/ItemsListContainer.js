@@ -2,24 +2,37 @@ import { React, useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { AllProducts } from "../helpers/AllProducts";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { getFirestore } from "../Firebase/firebase";
 
 function ItemListContainer(props) {
+  // const [items, setItems] = useState([]);
+
+  // useEffect(() => {
+  //   getAllProducts();
+  // }, []);
+
+  // const getAllProducts = async () => {
+  //   try {
+  //     const res = await AllProducts();
+  //     setItems(res);
+  //   } catch (err) {
+  //     console.log("Error al cargar los productos: ", err);
+  //   }
+  // };
+
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    getAllProducts();
+    getFirestore()
+      .collection("items")
+      .get()
+      .then((data) => {
+        const nuevosItems = data.docs.map((doc) => doc.data());
+        setItems(nuevosItems);
+      });
   }, []);
 
-  const getAllProducts = async () => {
-    try {
-      const res = await AllProducts();
-      setItems(res);
-    } catch (err) {
-      console.log("Error al cargar los productos: ", err);
-    }
-  };
-
-  // LOADING
+  // LOADING - probar implementar, tengo errores
   //////////////////////////////////////////////
   // const [loading, setLoading] = useState("");
   // useEffect(() => {

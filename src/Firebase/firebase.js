@@ -1,8 +1,9 @@
 // ACÁ INSTALAMOS Y PEDIMOS LA API
-import firebase from "firebase/app";
-import "firebase/firestore";
 
-const app = firebase.initializeApp({
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+
+const firebaseConfig = {
   //aca nos copiamos del navegador lo que nos entrega firebase
 
   apiKey: "AIzaSyDx0PaYkXc-LQbahWFVcH7F3syPniAQJ68",
@@ -11,8 +12,8 @@ const app = firebase.initializeApp({
   storageBucket: "react-coder-house.appspot.com",
   messagingSenderId: "102726752357",
   appId: "1:102726752357:web:4cca05d409ba7d6f5f0e8c",
-});
+};
 
-export const getFirebase = () => app;
+firebase.initializeApp(firebaseConfig);
 
-export const getFirestore = () => app.firestore();
+export const getFirestore = () => firebase.firestore();

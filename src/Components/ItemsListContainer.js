@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { AllProducts } from "../helpers/AllProducts";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getFirestore } from "../Firebase/firebase";
+import { listCallback } from "../helpers/AllProducts.js";
 
 function ItemListContainer(props) {
   // const [items, setItems] = useState([]);
@@ -20,15 +21,18 @@ function ItemListContainer(props) {
   //   }
   // };
 
+  // ID
+
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     getFirestore()
       .collection("items")
       .get()
-      .then((data) => {
-        const nuevosItems = data.docs.map((doc) => doc.data());
-        setItems(nuevosItems);
+      .then((res) => {
+        const items = listCallback(res);
+        console.log(items);
+        setItems(items);
       });
   }, []);
 

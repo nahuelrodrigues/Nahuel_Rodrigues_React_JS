@@ -2,21 +2,20 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 
 import { useParams } from "react-router-dom";
-import { remoteItems } from "../helpers/AllProducts";
+// REMOTE ITEMS NO VA MAS --> HAY QUE CAMBIAR A FIRESTORE
+import { getProductById } from "../helpers/AllProducts";
 
 function ItemDetailContainer() {
   const [item, setItem] = useState({});
   const { itemId } = useParams();
 
-  const getItem = (itemId) => {
-    const UnItem = remoteItems.find((el) => el.id == itemId);
-    setItem(UnItem);
-  };
+  useEffect(() => {
+    getProductById(itemId).then((res) => {
+      setItem({ id: res.id, ...res.data() });
+    });
+  }, [itemId]);
 
   // ACÁ REEMPLAZAR POR PRODUCTOS DE FIRESTORE
-  useEffect(() => {
-    getItem(itemId);
-  }, []);
 
   return <ItemDetail className="" item={item} />;
   // return (

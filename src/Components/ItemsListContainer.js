@@ -6,23 +6,6 @@ import { getFirestore } from "../Firebase/firebase";
 import { listCallback } from "../helpers/AllProducts.js";
 
 function ItemListContainer(props) {
-  // const [items, setItems] = useState([]);
-
-  // useEffect(() => {
-  //   getAllProducts();
-  // }, []);
-
-  // const getAllProducts = async () => {
-  //   try {
-  //     const res = await AllProducts();
-  //     setItems(res);
-  //   } catch (err) {
-  //     console.log("Error al cargar los productos: ", err);
-  //   }
-  // };
-
-  // ID
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {

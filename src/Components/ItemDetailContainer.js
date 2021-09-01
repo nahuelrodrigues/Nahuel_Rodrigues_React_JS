@@ -15,8 +15,6 @@ function ItemDetailContainer() {
     });
   }, [itemId]);
 
-  // ACÁ REEMPLAZAR POR PRODUCTOS DE FIRESTORE
-
   return <ItemDetail className="" item={item} />;
   // return (
   //   <>

@@ -30,7 +30,7 @@ function ItemList({ items }) {
   //filtro
   return categoryId
     ? items
-        .filter((products) => products.category == categoryId)
+        .filter((products) => products.categoryName == categoryId)
         .map((products) => addItem(products))
     : items.map((products) => addItem(products));
 }

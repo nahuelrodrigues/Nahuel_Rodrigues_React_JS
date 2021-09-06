@@ -7,6 +7,7 @@ import { getFirestore } from "../Firebase/firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
 const Checkout = () => {
   // acá cart no existe y calctotal tampoco (lo calculo en un jsx)
@@ -69,7 +70,7 @@ const Checkout = () => {
 
   return (
     <Container>
-      <Form>
+      <Form style={{ marginTop: 30 }}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
           <Form.Control

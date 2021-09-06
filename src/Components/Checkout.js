@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Checkout = () => {
   // acá cart no existe y calctotal tampoco (lo calculo en un jsx)
-  const { cart, calcTotal } = useContext(CartContext);
+  const { items, calcTotal } = useContext(CartContext);
   const [customerInfo, setCustomerInfo] = useState({
     name: null,
     email: null,
@@ -32,8 +32,8 @@ const Checkout = () => {
     const db = getFirestore();
     const orders = db.collection("orders");
     const batch = db.batch();
-    console.log("carro", cart);
-    const infoCart = cart.map(({ item, quantity }) => ({
+
+    const infoCart = items.map(({ item, quantity }) => ({
       items: {
         id: item.id,
         title: item.title,
@@ -57,7 +57,7 @@ const Checkout = () => {
       .add(newOrder)
       .then((response) => {
         console.log("Productos a Firebase", response);
-        cart.forEach(({ item, quantity }) => {
+        items.forEach(({ item, quantity }) => {
           const docRef = db.collection("items").doc(item.id);
           batch.update(docRef, { stock: item.stock - quantity });
         });

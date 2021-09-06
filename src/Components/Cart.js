@@ -4,6 +4,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Components/Context/CartContext";
 import { FaTrashAlt } from "react-icons/fa";
+import { Button } from "react-bootstrap";
 
 /* const sumaTotal = () => {
   const { items } = useContext(CartContext);
@@ -138,9 +139,9 @@ const Cart = () => {
             </Link>
           </div>
           <div className="column">
-            <a className="btn btn-success" href="#">
-              Comprar
-            </a>
+            <Button as={Link} to="/finalizar-compra">
+              Finalizar compra
+            </Button>
           </div>
         </div>
       </div>

@@ -4,6 +4,13 @@ export const CartContext = createContext([]);
 // creo mi Componente
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
+
+  const [cart, setCart] = useState([]);
+
+  const calcTotal = () => {
+    return cart.reduce((acc, el) => el.item.price * el.quantity + acc, 0);
+  };
+
   //checkear si está en cart
   const isInCart = (id) => items.find((e) => e.item.id === id) !== undefined;
   // borrar todo lo que hay en el cart
@@ -68,6 +75,8 @@ export const CartProvider = ({ children }) => {
         clear,
         cartSize,
         removeItems,
+        cart,
+        calcTotal,
       }}
     >
       {children}
